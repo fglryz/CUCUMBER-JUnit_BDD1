@@ -22,17 +22,17 @@ Faker faker=new Faker();
 
     @Then("User sees \"Signup\\/Login' button successfully")
     public void userSeesSignupLoginButtonSuccessfully() {
-        Assert.assertTrue(signupPage.signupPage.isDisplayed());
+        Assert.assertTrue(signupPage.signupButton.isDisplayed());
     }
     @Given("User Clicks on {string} button")
     public void user_clicks_on_button(String string) {
-signupPage.Name.sendKeys(faker.name().fullName());
+     signupPage.signupButton.click();
 
     }
 
     @When("User fills the Name box")
     public void user_fills_the_name_box() {
-
+        signupPage.Name.sendKeys(faker.name().fullName());
     }
 
     @When("User fills the Email Address")
@@ -42,14 +42,12 @@ signupPage.Name.sendKeys(faker.name().fullName());
 
     @When("User clics the signup button")
     public void user_clics_the_signup_button() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        signupPage.signUp.click();
     }
 
     @Then("User sees the ENTER ACCOUNT INFORMATION text")
     public void user_sees_the_enter_account_information_text() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        Assert.assertTrue(signupPage.accountInformation.isDisplayed());
     }
 
 }

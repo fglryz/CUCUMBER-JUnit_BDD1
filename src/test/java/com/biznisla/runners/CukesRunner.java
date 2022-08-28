@@ -15,7 +15,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "com/biznisla/step_definitions",
         dryRun = false,
-        tags = "",
+        tags = "@wip",
         publish = false
 
 )

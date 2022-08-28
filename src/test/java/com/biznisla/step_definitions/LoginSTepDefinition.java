@@ -11,7 +11,7 @@ import org.junit.Assert;
 
 public class LoginSTepDefinition {
     SignupPage signupPage = new SignupPage();
-Faker faker=new Faker();
+    Faker faker = new Faker();
 
     @Given("User navigates to url")
 
@@ -20,19 +20,20 @@ Faker faker=new Faker();
 
     }
 
-    @Then("User sees \"Signup\\/Login' button successfully")
-    public void userSeesSignupLoginButtonSuccessfully() {
-        Assert.assertTrue(signupPage.signupButton.isDisplayed());
-    }
+
     @Given("User Clicks on {string} button")
     public void user_clicks_on_button(String string) {
-     signupPage.signupButton.click();
+        signupPage.signupButton.click();
 
     }
 
     @When("User fills the Name box")
     public void user_fills_the_name_box() {
         signupPage.Name.sendKeys(faker.name().fullName());
+    }
+    @Then("User sees \"Signup\\/Login' button successfully")
+    public void userSeesSignupLoginButtonSuccessfully() throws Throwable {
+        Assert.assertTrue(signupPage.signupButton.isDisplayed());
     }
 
     @When("User fills the Email Address")
@@ -49,5 +50,6 @@ Faker faker=new Faker();
     public void user_sees_the_enter_account_information_text() {
         Assert.assertTrue(signupPage.accountInformation.isDisplayed());
     }
+
 
 }

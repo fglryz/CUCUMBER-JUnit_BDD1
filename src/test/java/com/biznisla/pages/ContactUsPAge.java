@@ -19,8 +19,16 @@ public class ContactUsPAge extends BasePage {
     public WebElement Email;
     @FindBy(xpath = "//input[@name='subject']")
     public WebElement subject;
+    @FindBy(id = "message")
+    public WebElement message;
     @FindBy(xpath = "//input[@name='upload_file']")
     public WebElement uploadFile;
+    @FindBy(xpath = "//input[@name='submit']")
+    public WebElement submit;
+    @FindBy(xpath = "(//div[contains(text(),'Success! Your details have been submitted successfully.')])[1]")
+    public WebElement success;
+
+
 
 
 

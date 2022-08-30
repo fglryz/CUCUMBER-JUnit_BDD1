@@ -52,4 +52,18 @@ public class LoginSTepDefinition {
     }
 
 
+    @When("User fills email box")
+    public void userFillsEmailBox() {
+        signupPage.LoginEmailAddress.sendKeys("fglryz.111@gmail.com");
+    }
+
+    @When("User fills the password")
+    public void userFillsThePassword() {
+        signupPage.password.sendKeys("fg123456");
+    }
+
+    @When("User clicks tke login button")
+    public void userClicksTkeLoginButton() {
+        signupPage.login.click();
+    }
 }

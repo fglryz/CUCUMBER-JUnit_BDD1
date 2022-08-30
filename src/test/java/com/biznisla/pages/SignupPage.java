@@ -14,6 +14,16 @@ public class SignupPage extends BasePage {
     public WebElement signUp;
     @FindBy(xpath = "//*[@id=\"form\"]/div/div/div/div/h2/b")
     public WebElement accountInformation;
+    @FindBy(xpath = "((//input[@name='email'])[1])")
+    public WebElement LoginEmailAddress;
+    @FindBy(xpath = "//input[@name='password']")
+    public WebElement password;
+    @FindBy(xpath = "//button[contains(text(),'Login')]")
+    public WebElement login;
+
+
+
+
 
 
 

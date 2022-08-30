@@ -1,4 +1,4 @@
-@wip
+
 Feature: Account information feature
   Background:
     Given User navigates to url

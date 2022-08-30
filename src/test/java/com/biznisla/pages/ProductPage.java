@@ -18,6 +18,24 @@ public class ProductPage extends BasePage {
     @FindBy(xpath = "//i[@class='fa fa-search']")
     public WebElement  clickSearchButton;
 
+    @FindBy(xpath = "(//p[contains(text(),'Blue Top')])[1]")
+    public WebElement displaySearch;
+    @FindBy(xpath = "(//a[@class='btn btn-default add-to-cart'])[1]")
+    public WebElement addToChart1;
+    @FindBy(xpath = "(//a[@class='btn btn-default add-to-cart'])[2]")
+    public WebElement addToChart2;
+    @FindBy(xpath = "//button[contains(text(),'Continue Shopping')]")
+    public WebElement shopContinueBtton;
+    @FindBy(xpath =  "//*[@id=\"header\"]/div/div/div/div[2]/div/ul/li[3]/a")
+    public WebElement charButton;
+
+
+
+
+
+
+
+
 
 
 

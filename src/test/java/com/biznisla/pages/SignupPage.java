@@ -20,6 +20,10 @@ public class SignupPage extends BasePage {
     public WebElement password;
     @FindBy(xpath = "//button[contains(text(),'Login')]")
     public WebElement login;
+    @FindBy(xpath = "//p[contains(text(),'Email Address already exist!')]")
+    public WebElement errorMessage;
+
+
 
 
 

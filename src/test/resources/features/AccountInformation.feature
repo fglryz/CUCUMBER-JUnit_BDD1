@@ -6,7 +6,7 @@ Feature: Account information feature
     Given User Clicks on 'Sign Up' button
     When User fills the Name box
     And User fills the Email Address
-    When User clics the signup button
+    When User clicks the signup buttons
     Then User sees the ENTER ACCOUNT INFORMATION text
   Scenario:To complete account information page
     When User click on Mrs checkbox

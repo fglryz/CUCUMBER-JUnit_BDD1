@@ -1,6 +1,7 @@
 package com.biznisla.step_definitions;
 
 import com.biznisla.pages.AccountPage;
+import com.biznisla.pages.SignupPage;
 import com.github.javafaker.Faker;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.support.ui.Select;
@@ -8,6 +9,7 @@ import org.openqa.selenium.support.ui.Select;
 public class AccountInfStepDef {
     AccountPage accountPage=new AccountPage();
     Faker faker=new Faker();
+    SignupPage signupPage=new SignupPage();
     @When("User click on Mrs checkbox")
     public void user_click_on_mrs_checkbox() {
         accountPage.title.click();
@@ -86,4 +88,8 @@ public class AccountInfStepDef {
         accountPage.createAccountButton.click();
     }
 
+    @When("User clicks the signup buttons")
+    public void userClicksTheSignupButtons() {
+        signupPage.signUp.click();
+    }
 }

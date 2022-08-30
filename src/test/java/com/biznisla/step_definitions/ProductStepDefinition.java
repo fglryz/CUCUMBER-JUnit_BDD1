@@ -1,6 +1,7 @@
 package com.biznisla.step_definitions;
 
 import com.biznisla.pages.ProductPage;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
@@ -23,9 +24,32 @@ public class ProductStepDefinition {
     }
     @When("Verify {string} is visible")
     public void verify_is_visible(String string) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+      Assert.assertTrue(productPage.searchProduct.isDisplayed());
     }
+
+
+    @When("User hovers over first product and click Add to cart")
+    public void userHoversOverFirstProductAndClickAddToCart() {
+
+        productPage.addToChart1.click();
+    }
+
+    @And("User clicks Continue Shopping button")
+    public void userClicksContinueShoppingButton() {
+        productPage.shopContinueBtton.click();
+    }
+
+
+    @When("User hovers over second product and click Add to cart")
+    public void userHoversOverSecondProductAndClickAddToCart() {
+        productPage.addToChart2.click();
+    }
+
+    @And("User  clicks {string} button")
+    public void userClicksViewCartButton() {
+        productPage.charButton.click();
+    }
+
 
 
 }

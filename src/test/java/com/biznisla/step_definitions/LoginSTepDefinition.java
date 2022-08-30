@@ -41,10 +41,7 @@ public class LoginSTepDefinition {
         signupPage.EmailAddress.sendKeys(faker.internet().emailAddress());
     }
 
-    @When("User clics the signup button")
-    public void user_clics_the_signup_button() {
-        signupPage.signUp.click();
-    }
+
 
     @Then("User sees the ENTER ACCOUNT INFORMATION text")
     public void user_sees_the_enter_account_information_text() {
@@ -65,5 +62,22 @@ public class LoginSTepDefinition {
     @When("User clicks tke login button")
     public void userClicksTkeLoginButton() {
         signupPage.login.click();
+
+    }
+
+    @When("User enters name and already registered email address")
+    public void userEntersNameAndAlreadyRegisteredEmailAddress() {
+        signupPage.Name.sendKeys("Fatma");
+        signupPage.EmailAddress.sendKeys("fglryz.111@gmail.com");
+    }
+
+    @Then("User sees Email Address already exist! error message")
+    public void userSeesEmailAddressAlreadyExistErrorMessage() {
+        Assert.assertTrue(signupPage.errorMessage.isDisplayed());
+    }
+
+    @When("User clicks the signup")
+    public void userClicksTheSignup() {
+        signupPage.signUp.click();
     }
 }

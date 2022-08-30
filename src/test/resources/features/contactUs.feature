@@ -16,3 +16,4 @@ Feature:Test Contact Us feature
   And User clicks 'Submit' button
   When User clicks OK button
   Then User sees success message 'Success! Your details have been submitted successfully.' is visible
+

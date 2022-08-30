@@ -7,7 +7,7 @@ Feature:Test Contact Us feature
     When User fills email box
     When User fills the password
     When User clicks tke login button
-  @wip
+
   Scenario:
   When User clicks on 'Contact Us' button
   Then User sees the  'GET IN TOUCH' is visible

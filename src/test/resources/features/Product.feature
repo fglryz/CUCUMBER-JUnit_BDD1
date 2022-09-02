@@ -1,4 +1,4 @@
-@wip
+
 Feature: Test to product feature
   Background:
     Given User navigates to url

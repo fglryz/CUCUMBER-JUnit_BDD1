@@ -9,7 +9,8 @@ Feature:Verify all spartans
     And Print out the user's name
     And Print out the user's gender
 
-    Scenario
+    Scenario:
+
 
 
 

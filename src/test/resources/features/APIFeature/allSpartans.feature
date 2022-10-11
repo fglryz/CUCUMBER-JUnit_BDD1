@@ -1,5 +1,6 @@
-@wip
+
 Feature:Verify all spartans
+
   Scenario: Retrieve all spartans via API
     When API get request is made to endpoint "http://54.91.11.180:8000/api/spartans"
     Then verify status code is 200
@@ -8,8 +9,9 @@ Feature:Verify all spartans
     And Print out the user's id
     And Print out the user's name
     And Print out the user's gender
+    And  Print out the user's phone
 
-    Scenario:
+
 
 
 

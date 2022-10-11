@@ -1,7 +1,7 @@
-package com.biznisla.step_definitions;
+package com.automation.step_definitions.UIStepDef;
 
-import com.biznisla.pages.AccountPage;
-import com.biznisla.pages.SignupPage;
+import com.automation.pages.AccountPage;
+import com.automation.pages.SignupPage;
 import com.github.javafaker.Faker;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.support.ui.Select;

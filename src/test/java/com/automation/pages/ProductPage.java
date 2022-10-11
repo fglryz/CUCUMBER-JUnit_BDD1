@@ -1,9 +1,10 @@
-package com.biznisla.pages;
+package com.automation.pages;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class ProductPage extends BasePage {
+
     @FindBy(xpath = "//a[@href='/products']")
     public WebElement productButton;
 
@@ -28,6 +29,9 @@ public class ProductPage extends BasePage {
     public WebElement shopContinueBtton;
     @FindBy(xpath =  "//*[@id=\"header\"]/div/div/div/div[2]/div/ul/li[3]/a")
     public WebElement charButton;
+
+
+
 
 
 

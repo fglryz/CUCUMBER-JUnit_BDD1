@@ -1,6 +1,6 @@
-package com.biznisla.step_definitions;
+package com.automation.step_definitions.UIStepDef;
 
-import com.biznisla.pages.ProductPage;
+import com.automation.pages.ProductPage;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;

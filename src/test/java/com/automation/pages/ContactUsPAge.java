@@ -1,9 +1,9 @@
-package com.biznisla.pages;
+package com.automation.pages;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-import java.security.cert.X509Certificate;
+
 
 public class ContactUsPAge extends BasePage {
 

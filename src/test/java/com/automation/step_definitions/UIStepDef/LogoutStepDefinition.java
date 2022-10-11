@@ -1,13 +1,10 @@
-package com.biznisla.step_definitions;
+package com.automation.step_definitions.UIStepDef;
 
-import com.biznisla.pages.BasePage;
-import com.biznisla.pages.LogoutPage;
-import com.biznisla.utilities.Driver;
+import com.automation.pages.BasePage;
+import com.automation.pages.LogoutPage;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.interactions.Actions;
 
 public class LogoutStepDefinition extends BasePage {
    LogoutPage logoutPage=new LogoutPage();

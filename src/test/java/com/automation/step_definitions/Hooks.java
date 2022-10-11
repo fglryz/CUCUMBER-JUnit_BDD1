@@ -1,6 +1,6 @@
-package com.biznisla.step_definitions;
+package com.automation.step_definitions;
 
-import com.biznisla.utilities.Driver;
+import com.automation.utilities.Driver;
 import io.cucumber.java.After;
 import io.cucumber.java.Scenario;
 import org.openqa.selenium.OutputType;
@@ -33,7 +33,7 @@ public class Hooks {
 
         }
         //BrowserUtils.sleep(5);
-        Driver.closeDriver();
+       // Driver.closeDriver();
 
         //System.out.println("====Closing browser using cucumber @After");
         //System.out.println("Scenario ended/Take screenshot if failed");

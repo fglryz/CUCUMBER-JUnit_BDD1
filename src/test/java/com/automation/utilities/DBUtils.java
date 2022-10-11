@@ -1,4 +1,4 @@
-package com.biznisla.utilities;
+package com.automation.utilities;
 
 import java.sql.*;
 import java.util.ArrayList;

@@ -1,7 +1,7 @@
-package com.biznisla.step_definitions;
+package com.automation.step_definitions.UIStepDef;
 
-import com.biznisla.pages.ContactUsPAge;
-import com.biznisla.utilities.Driver;
+import com.automation.pages.ContactUsPAge;
+import com.automation.utilities.Driver;
 import com.github.javafaker.Faker;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;

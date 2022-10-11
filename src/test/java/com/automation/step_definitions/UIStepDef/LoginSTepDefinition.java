@@ -1,8 +1,8 @@
-package com.biznisla.step_definitions;
+package com.automation.step_definitions.UIStepDef;
 
-import com.biznisla.pages.SignupPage;
-import com.biznisla.utilities.ConfigurationReader;
-import com.biznisla.utilities.Driver;
+import com.automation.pages.SignupPage;
+import com.automation.utilities.ConfigurationReader;
+import com.automation.utilities.Driver;
 import com.github.javafaker.Faker;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;

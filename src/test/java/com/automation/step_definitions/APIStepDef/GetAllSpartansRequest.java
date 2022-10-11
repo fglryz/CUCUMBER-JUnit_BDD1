@@ -1,31 +1,22 @@
-package com.biznisla.step_definitions;
+package com.automation.step_definitions.APIStepDef;
 
-import com.biznisla.pages.BasePage;
-import com.biznisla.pages.TestBase;
-import io.cucumber.java.Scenario;
 import io.cucumber.java.en.And;
-import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.restassured.http.ContentType;
+import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
-import org.apache.poi.ss.formula.functions.T;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.jupiter.api.BeforeAll;
-import java.util.Optional;
+
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class GetRequest  {
+public class GetAllSpartansRequest {
+
     Response response;
+    JsonPath jsonPath=response.jsonPath();
     String baseurl="http://54.91.11.180:8000";
-
-
-
 
     @When("API get request is made to endpoint {string}")
     public void apiGetRequestIsMadeToEndpoint(String endpoint) {
@@ -68,4 +59,10 @@ public class GetRequest  {
 
     }
 
+    @And("Print out the user's phone")
+    public void printOutTheUserSPhone() {
+        String phone=response.path("[1].phone");
+        System.out.println("phone = " + phone);
+
+    }
 }

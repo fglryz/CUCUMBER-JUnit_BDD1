@@ -1,6 +1,7 @@
 package automation.utilities;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.apache.commons.collections.bidimap.AbstractDualBidiMap;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -8,10 +9,12 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import java.util.concurrent.TimeUnit;
 
 public class Driver {
+
+
     /*
-  Creating a private constructor, so we are closing
-  access to the object of this class from outside the class
-   */
+    Creating a private constructor, so we are closing
+    access to the object of this class from outside the class
+     */
     private Driver(){}
 
     /*
@@ -54,20 +57,7 @@ public class Driver {
                     driverPool.get().manage().window().maximize();
                     driverPool.get().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
                     break;
-                // case "remote-chrome":
-                // assign your grid server address
-                // String gridAdress = "; // put your own Linux grid IP here
-                // try {
-                // URL url = new URL("http://"+gridAdress+":4444/wd/hub");
-                // DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
-                //  desiredCapabilities.setBrowserName("chrome");
-                // driverPool.set(new RemoteWebDriver(url,desiredCapabilities));
-                // driverPool.get().manage().window().maximize();
-                // driverPool.get().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-                //} catch (MalformedURLException e) {
-                //  e.printStackTrace();
-                //  }
-                // break;
+
             }
         }
 

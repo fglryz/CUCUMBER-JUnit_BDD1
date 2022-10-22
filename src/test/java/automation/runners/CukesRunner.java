@@ -13,8 +13,8 @@ import org.junit.runner.RunWith;
                 "me.jvt.cucumber.report.PrettyReports:target/cucumber",
         },
         features = "src/test/resources/features",
-        glue = "com/automation/step_definitions",
-        dryRun =true,
+        glue = "automation/step_definitions",
+        dryRun =false,
         tags = "@wip",
         publish = false
 

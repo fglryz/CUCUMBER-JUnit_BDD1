@@ -2,6 +2,7 @@ package automation.step_definitions.UIStepDef;
 
 import automation.pages.LoginPage;
 import automation.pages.MessagePage;
+import automation.utilities.BrowserUtils;
 import automation.utilities.ConfigurationReader;
 import automation.utilities.Driver;
 import io.cucumber.java.en.Given;
@@ -19,6 +20,7 @@ public class loginPageStepDef {
     }
     @When("User enters {string}")
     public void user_enters(String userName) {
+
         loginPage.UserName.sendKeys(userName);
     }
     @When("User fills {string}")
@@ -31,12 +33,12 @@ public class loginPageStepDef {
     }
     @Then("User sees Activity Stream on home page")
     public void user_sees_activity_stream_on_home_page() {
-        loginPage.PageTitle.isDisplayed();
+        loginPage.activeStream.isDisplayed();
     }
-
     @Then("User sees {string}")
     public void userSees(String WarningMessage) {
      loginPage.warningPage.isDisplayed();
+
     }
 
 

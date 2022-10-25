@@ -14,7 +14,7 @@ public class LoginPage extends BasePage{
     @FindBy(xpath = "//input[@class='login-btn']")
     public WebElement LoginInButton;
     @FindBy(id = "pagetitle")
-    public WebElement PageTitle;
+    public WebElement activeStream;
     @FindBy(xpath = "//div[@class='errortext']")
     public WebElement warningPage;
 

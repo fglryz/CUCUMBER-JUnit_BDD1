@@ -6,30 +6,73 @@ import org.openqa.selenium.support.FindBy;
 import java.util.List;
 
 public class TaskPage extends BasePage{
-    @FindBy(xpath = "//span[@class='bx-finder-groupbox-name']")
+    @FindBy(xpath = "//div[@class='bx-finder-box-item-t7-name']")
     public List<WebElement> resPerson;
 
     @FindBy(xpath = "//span[@class='bx-finder-groupbox-name']")
     public List<WebElement> createdByNames;
 
-    @FindBy(xpath = "//span[@class='bx-finder-groupbox-name']")
+    @FindBy(xpath = "//div[@class='bx-finder-box-item-t7-name']")
     public List<WebElement> ParticipantsName;
 
     @FindBy(xpath = "//span[@class='bx-finder-groupbox-name']")
     public List<WebElement> ObserversName;
 
-    @FindBy(xpath = "//span[.='Task']/span")
+    @FindBy(xpath = "//span[@id='feed-add-post-form-tab-tasks']/span")
     public WebElement TaskTab;
-    @FindBy(xpath = "//input[@type='text']")
+    @FindBy(xpath = "(//span[@title='Cancel selection'])[1]")
+    public WebElement CancelSelectionSign;
+
+    @FindBy(xpath = "//input[@data-bx-id='task-edit-title']")
     public WebElement messageBox;
 
-    @FindBy(xpath = "(//span[@class='task-form-field-controls'])[1]")
-    public WebElement ResPersonBox;
-
-
-
-    @FindBy(id = "name-selector-140089192")
+    @FindBy(xpath = "//span[@id='feed-add-post-form-tab-tasks']/span")
     public  WebElement responsiblePerson;
+    @FindBy(xpath = "//div[@id='bx-component-scope-lifefeed_task_form-responsible']/span/span/span")
+    public  WebElement deleteSignButton;
+
+    @FindBy(xpath = "//span[@class='popup-window-close-icon']")
+    public  WebElement dltButton;
+
+    @FindBy(xpath = "//input[@class='task-options-inp']")
+    public  WebElement deadlineBox;
+    @FindBy(xpath = "//a[.='31']")
+    public WebElement day;
+    @FindBy(xpath = "//span[.='Select']")
+    public  WebElement selectButton;
+    @FindBy(xpath = "//span[.='Time planning']")
+    public  WebElement timePlaningButton;
+    @FindBy(xpath = "//span[.='Options']")
+    public  WebElement optionButton;
+    @FindBy(xpath = "(//input[@type='checkbox'])[15]")
+    public  WebElement firstCheckBox;
+    @FindBy(xpath = "(//input[@type='checkbox'])[17]")
+    public  WebElement thirdCheckBox;
+
+    @FindBy(xpath = "(//input[@class='task-options-inp'])[2]")
+    public  WebElement startTaskButton;
+    @FindBy(xpath = "(//input[@class='task-options-inp'])[4]")
+    public  WebElement finishTaskButton;
+    @FindBy(xpath = "//div[@class='bx-calendar-range']/a[2]")
+    public  WebElement startDay;
+    @FindBy(xpath = "//div[@class='bx-calendar-range']/a[3]")
+    public  WebElement finishDay;
+    @FindBy(xpath = "//*[@id=\"bx-component-scope-lifefeed_task_form-accomplice\"]/span[2]/a[2]")
+    public  WebElement addButton;
+    @FindBy(xpath = "//span[@class='popup-window-close-icon']")
+    public  WebElement popupWindowClose;
+    @FindBy(xpath = "//*[@id=\"bx-component-scope-lifefeed_task_form-accomplice\"]/span[2]/a[1]")
+    public  WebElement addMoreButton;
+    @FindBy(xpath = "//div[@class='task-message-label error']")
+    public  WebElement errorMessage;
+
+
+
+
+
+    @FindBy(xpath = "//div[.='Task has been created']")
+    public  WebElement verificationText;
+
     @FindBy(xpath = "(//span[contains(text(),'Created by')])[1]")
     public WebElement createdByButton;
     @FindBy(xpath = "(//span[contains(text(),'Participants')])[1]")

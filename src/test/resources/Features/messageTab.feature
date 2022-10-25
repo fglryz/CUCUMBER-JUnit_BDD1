@@ -1,10 +1,11 @@
+
 Feature: As a user, I should be able to add link, insert video, mention, quote, add tag in message
 
   Background: For the scenarios in the feature file, user is expected to be on homepage
     Given User is on homepage
     Given User navigates to messages tab
 
-  @AC1
+ @AC1
   Scenario: User should be able to add mentions about only department employees
     When User clicks Add Mention button
     And User clicks Employee and departments tab
@@ -15,7 +16,19 @@ Feature: As a user, I should be able to add link, insert video, mention, quote, 
       | helpdesk22@cybertekschool.com |
 
 
-  @AC2
+ Scenario Outline: User should be able to add mentions about only department employees
+    When User clicks Add Mention button
+    And User clicks Employee and departments tab
+    When User clicks on "<Department Employee username>"
+    When User clicks Send button at Messages Tab
+    Then User sees "<mentioned Employee username>" on Activity Stream
+   Examples:
+     | Department Employee username  | mentioned Employee username   |
+     | helpdesk22@cybertekschool.com | helpdesk22@cybertekschool.com |
+     | hr81@cybertekschool.com       | hr81@cybertekschool.com       |
+
+
+    @AC2
   Scenario Outline: User should be able to attach link to specified text
     When User clicks Link button
     When User fills out the text box with "<Text>" and link ribbon with "<Link>"
@@ -45,6 +58,7 @@ Feature: As a user, I should be able to add link, insert video, mention, quote, 
 
   @AC4
   Scenario Outline: User should be able to add quotes
+
     When User clicks Quote Text button
     When User enters a "<Quote>" in yellow quote ribbon
     When User clicks Send button at Messages Tab

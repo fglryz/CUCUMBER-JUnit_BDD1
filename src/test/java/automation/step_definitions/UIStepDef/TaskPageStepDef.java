@@ -2,6 +2,7 @@ package automation.step_definitions.UIStepDef;
 
 
 import automation.pages.TaskPage;
+import automation.utilities.BrowserUtils;
 import automation.utilities.Driver;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -11,9 +12,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
 
-public class TaskPageStepDef {
-    TaskPage taskPage = new TaskPage();
-    Actions actions=new Actions(Driver.getDriver());
+public class TaskPageStepDef extends BrowserUtils {
+    //TaskPage taskPage = new TaskPage();
+    //Actions actions=new Actions(Driver.get());
 
     @When("User clicks Task tab")
     public void userClicksTaskTab() {

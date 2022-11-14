@@ -2,18 +2,19 @@ package automation.step_definitions.UIStepDef;
 
 import automation.pages.BasePage;
 import automation.pages.PoolPage;
+import automation.utilities.BrowserUtils;
 import automation.utilities.Driver;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 
-public class PoolPageStep extends BasePage {
-    PoolPage poolPage=new PoolPage();
+public class PoolPageStep extends BrowserUtils {
+
 
     @When("User clicks Pool Tab")
     public void userClicksPoolTab() {
-      poolPage.poolTab.click();
+     // poolPage.poolTab.click();
     }
 
     @When("User writes first Question")
@@ -43,13 +44,14 @@ public class PoolPageStep extends BasePage {
 
     @When("User writes the {string} on poolBox")
     public void userWritesTheOnPoolBox(String text) {
-        Driver.getDriver().switchTo().frame(poolPage.messagesIframe);
+        driver.switchTo().frame(poolPage.messagesIframe);
         poolPage.messagesInput.sendKeys(text);
-        Driver.getDriver().switchTo().defaultContent();
+        driver.switchTo().defaultContent();
     }
 
     @When("User clicks Send button at under add questions")
     public void userClicksSendButtonAtUnderAddQuestions() {
+        sleep(5);
         poolPage.sendButton.click();
     }
 

@@ -1,9 +1,9 @@
 
 Feature: As a user, I should be able to login, so that I can land on homepage.
-Background:
 
-     Scenario Outline: User should be able to login with  Valid CredentialsGiven User navigate  the url
-    Given User navigate  the url
+  @wip
+     Scenario Outline: User should be able to login with  Valid Credentials
+     Given User navigate  the url
      When  User enters "<Valid Username>"
      When  User fills "<Valid Password>"
      When User clicks Log In button

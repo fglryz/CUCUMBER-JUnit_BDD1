@@ -6,8 +6,7 @@ import org.openqa.selenium.support.FindBy;
 public class PoolPage extends BasePage{
 
 
-    @FindBy(xpath = "//span[.='Poll']/span")
-    public WebElement poolTab;
+
     @FindBy(xpath = " //input[@id='question_0']")
     public WebElement QuestionBox;
     @FindBy(xpath = " //input[@id='answer_0__0_']")
@@ -19,11 +18,12 @@ public class PoolPage extends BasePage{
     @FindBy(xpath = " //input[@id='answer_0__3_']")
     public WebElement answer4;
 
-    @FindBy(xpath = "(//iframe[@class='bx-editor-iframe'])[1]")
+    @FindBy(xpath = "//iframe[@class='bx-editor-iframe']")
     public WebElement messagesIframe;
 
     @FindBy(xpath = "//body")
     public WebElement messagesInput;
+
     @FindBy(xpath = " //button[@id='blog-submit-button-save']")
     public WebElement sendButton;
 

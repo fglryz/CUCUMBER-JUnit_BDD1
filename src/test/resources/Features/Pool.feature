@@ -1,7 +1,8 @@
+
 Feature: As a user ,I should be able create pool
 Background:
   Given User is on homepage
-  @wip
+
   Scenario: User should be able to create pool with four choices
     When User clicks Pool Tab
     When User writes first Question

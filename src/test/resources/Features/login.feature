@@ -1,7 +1,7 @@
 
 Feature: As a user, I should be able to login, so that I can land on homepage.
 
-  @wip
+ @wip
      Scenario Outline: User should be able to login with  Valid Credentials
      Given User navigate  the url
      When  User enters "<Valid Username>"
@@ -12,7 +12,7 @@ Feature: As a user, I should be able to login, so that I can land on homepage.
      Examples:
      |Valid Username                              | Valid Password|
      |  helpdesk1@cybertekschool.com              |  UserUser      |
-     |  hr1@cybertekschool.com                    | UserUser       |
+     |  hr1@cybertekschool.com                    |  UserUser       |
 
 
 

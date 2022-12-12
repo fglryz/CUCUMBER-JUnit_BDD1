@@ -19,10 +19,9 @@ Faker faker=new Faker();
     @Given("User is on homepage")
     public void user_is_on_homepage() {
 
-        driver.get(ConfigurationReader.getProperty("loginUrl"));
-
-        loginPage.inputEmail.sendKeys(ConfigurationReader.getProperty("inputEmail"));
-        loginPage.inputPassword.sendKeys(ConfigurationReader.getProperty("inputPassword"));
+        driver.get(ConfigurationReader.getProperty("url"));
+        loginPage.inputUserName.sendKeys(ConfigurationReader.getProperty("username"));
+        loginPage.inputPassword.sendKeys(ConfigurationReader.getProperty("password"));
         loginPage.logInButton.click();
 
     }

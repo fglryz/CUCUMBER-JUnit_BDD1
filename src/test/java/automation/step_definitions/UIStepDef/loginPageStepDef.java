@@ -1,10 +1,9 @@
 package automation.step_definitions.UIStepDef;
 
 
-import automation.pages.BasePage;
+
 import automation.utilities.BrowserUtils;
 import automation.utilities.ConfigurationReader;
-import automation.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -14,11 +13,11 @@ public class loginPageStepDef extends BrowserUtils {
 
     @Given("User navigate  the url")
     public void user_navigate_the_url() {
-        Driver.get().get(ConfigurationReader.getProperty("url"));
+       driver.get(ConfigurationReader.getProperty("url"));
     }
     @When("User enters {string}")
     public void user_enters(String userName) {
-        loginPage.inputEmail.sendKeys(userName);
+        loginPage.inputUserName.sendKeys(userName);
     }
     @When("User fills {string}")
     public void user_fills(String password) {

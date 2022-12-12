@@ -30,6 +30,9 @@ public class PoolPage extends BasePage{
     @FindBy(xpath = "//div[.='Automation Tester Interview Questions']")
     public WebElement poolVerification;
 
+    @FindBy(css = "#feed-add-post-form-tab-vote span")
+    public WebElement poolTab;
+
 
 
 }

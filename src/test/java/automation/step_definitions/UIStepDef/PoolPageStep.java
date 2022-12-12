@@ -14,7 +14,7 @@ public class PoolPageStep extends BrowserUtils {
 
     @When("User clicks Pool Tab")
     public void userClicksPoolTab() {
-     // poolPage.poolTab.click();
+        poolPage.poolTab.click();
     }
 
     @When("User writes first Question")

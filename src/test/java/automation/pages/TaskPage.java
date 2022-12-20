@@ -1,8 +1,13 @@
 package automation.pages;
 
+import org.apache.poi.ss.usermodel.DataFormat;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.time.LocalTime;
+import java.util.Calendar;
 import java.util.List;
 
 public class TaskPage extends BasePage{
@@ -65,8 +70,46 @@ public class TaskPage extends BasePage{
     public  WebElement addMoreButton;
     @FindBy(xpath = "//div[@class='task-message-label error']")
     public  WebElement errorMessage;
+    @FindBy(css = "[class='bx-calendar-cell']")
+
+    public List<WebElement> calendarWeekDays;
+
+    public WebElement addTaskDayCalendar(){
+        Calendar calendar=Calendar.getInstance();
+        DateFormat dateFormat=new SimpleDateFormat("dd");
+        String today=dateFormat.format(calendar.getTime());//today
+        calendar.add(Calendar.DATE,1);//one day later
+        String tomorrow=dateFormat.format(calendar.getTime());
+        WebElement expectedDay=null;
+
+        for (WebElement day:calendarWeekDays){
+            if(day.getText().equalsIgnoreCase(tomorrow))
+                expectedDay=day;
+
+            }
+        return expectedDay;
 
 
+    }
+
+    @FindBy(xpath = " (//input[@class='bx-calendar-form-input'])[1]")
+    public WebElement timeHours;
+
+    public int addTaskHours(){
+        int hour= LocalTime.now().getHour();
+        hour=(hour>=12)? hour -=12 : hour;
+        return  hour;
+
+    }
+    @FindBy(xpath = " (//input[@class='bx-calendar-form-input'])[2]")
+    public WebElement minuteHours;
+
+    public int addTaskMinute(){
+        int minutes= LocalTime.now().getHour();
+        minutes=(minutes>=59)? minutes -=59 : minutes;
+        return  minutes;
+
+    }
 
 
 

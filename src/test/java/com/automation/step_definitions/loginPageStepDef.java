@@ -2,18 +2,21 @@ package com.automation.step_definitions;
 
 
 
+import com.automation.pages.LoginPage;
 import com.automation.utilities.BrowserUtils;
 import com.automation.utilities.ConfigurationReader;
+import com.automation.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 
-public class loginPageStepDef extends BrowserUtils {
+public class loginPageStepDef {
+    LoginPage  loginPage=new LoginPage();
 
     @Given("User navigate  the url")
     public void user_navigate_the_url() {
-       driver.get(ConfigurationReader.getProperty("url"));
+       Driver.getDriver().get(ConfigurationReader.getProperty("url"));
     }
     @When("User enters {string}")
     public void user_enters(String userName) {

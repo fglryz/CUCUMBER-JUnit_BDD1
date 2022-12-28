@@ -3,12 +3,14 @@ package com.automation.step_definitions;
 import com.automation.pages.BasePage;
 import com.automation.pages.PoolPage;
 import com.automation.utilities.BrowserUtils;
+import com.automation.utilities.Driver;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 
-public class PoolPageStep extends BrowserUtils {
+public class PoolPageStep  {
+    PoolPage poolPage=new PoolPage();
 
 
     @When("User clicks Pool Tab")
@@ -43,14 +45,14 @@ public class PoolPageStep extends BrowserUtils {
 
     @When("User writes the {string} on poolBox")
     public void userWritesTheOnPoolBox(String text) {
-        driver.switchTo().frame(poolPage.messagesIframe);
+        Driver.getDriver().switchTo().frame(poolPage.messagesIframe);
         poolPage.messagesInput.sendKeys(text);
-        driver.switchTo().defaultContent();
+        Driver.getDriver().switchTo().defaultContent();
     }
 
     @When("User clicks Send button at under add questions")
     public void userClicksSendButtonAtUnderAddQuestions() {
-        sleep(5);
+        BrowserUtils.sleep(5);
         poolPage.sendButton.click();
     }
 

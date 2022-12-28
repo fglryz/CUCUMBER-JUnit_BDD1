@@ -3,16 +3,18 @@ package com.automation.step_definitions;
 
 import com.automation.pages.TaskPage;
 import com.automation.utilities.BrowserUtils;
+import com.automation.utilities.Driver;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 
 
-public class TaskPageStepDef extends BrowserUtils {
-    //TaskPage taskPage = new TaskPage();
-    //Actions actions=new Actions(Driver.get());
+public class TaskPageStepDef {
+    TaskPage taskPage = new TaskPage();
+    Actions actions=new Actions(Driver.getDriver());
 
     @When("User clicks Task tab")
     public void userClicksTaskTab() {

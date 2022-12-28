@@ -28,7 +28,7 @@ public class Hooks {
         //scenario.isFailed() --->if scenario is failed this method will return TRUE boolean value
         if (scenario.isFailed()){
 
-            byte [] screenshot = ((TakesScreenshot) Driver.get()).getScreenshotAs(OutputType.BYTES);
+            byte [] screenshot = ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
             scenario.attach(screenshot,"image/png",scenario.getName());
 
         }

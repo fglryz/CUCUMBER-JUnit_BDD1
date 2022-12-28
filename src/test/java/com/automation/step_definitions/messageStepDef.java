@@ -1,9 +1,11 @@
 package com.automation.step_definitions;
 
 
+import com.automation.pages.LoginPage;
 import com.automation.pages.MessagePage;
 import com.automation.utilities.BrowserUtils;
 import com.automation.utilities.ConfigurationReader;
+import com.automation.utilities.Driver;
 import com.github.javafaker.Faker;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -13,12 +15,14 @@ import org.junit.Assert;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;
 
-public class messageStepDef extends BrowserUtils {
+public class messageStepDef  {
 Faker faker=new Faker();
+LoginPage loginPage=new LoginPage();
+MessagePage messagePage=new MessagePage();
     @Given("User is on homepage")
     public void user_is_on_homepage() {
 
-        driver.get(ConfigurationReader.getProperty("url"));
+        Driver.getDriver().get(ConfigurationReader.getProperty("url"));
         loginPage.inputUserName.sendKeys(ConfigurationReader.getProperty("username"));
         loginPage.inputPassword.sendKeys(ConfigurationReader.getProperty("password"));
         loginPage.logInButton.click();
@@ -138,7 +142,7 @@ Faker faker=new Faker();
     @Then("User sees the video URL at Activity Stream")
     public void userSeesTheVideoURLAtActivityStream() {
 
-        driver.switchTo().frame(messagePage.messagesIframe);
+        Driver.getDriver().switchTo().frame(messagePage.messagesIframe);
         Assert.assertTrue(messagePage.actualInputInMessagesBox.isDisplayed());
 
     }
@@ -156,9 +160,9 @@ Faker faker=new Faker();
     @When("User enters a {string} in yellow quote ribbon")
     public void userEntersAInYellowQuoteRibbon(String quote) {
 
-      driver.switchTo().frame(messagePage.messagesIframe);
+      Driver.getDriver().switchTo().frame(messagePage.messagesIframe);
      messagePage.getQuoteTextRibbon.sendKeys(quote);
-       driver.switchTo().defaultContent();
+       Driver.getDriver().switchTo().defaultContent();
 
     }
 
@@ -183,9 +187,9 @@ Faker faker=new Faker();
     @When("User enter a message input in message box")
     public void userEnterAMessageInputInMessageBox() {
 
-      driver.switchTo().frame(messagePage.messagesIframe);
+      Driver.getDriver().switchTo().frame(messagePage.messagesIframe);
         messagePage.messagesInput.sendKeys(faker.chuckNorris().fact());
-   driver.switchTo().defaultContent();
+   Driver.getDriver().switchTo().defaultContent();
 
 
     }

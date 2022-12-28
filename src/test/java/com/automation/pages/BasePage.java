@@ -12,7 +12,7 @@ public class BasePage  {
 
         public BasePage() {
 
-            PageFactory.initElements(Driver.get(), this);
+            PageFactory.initElements(Driver.getDriver(), this);
         }
 
 

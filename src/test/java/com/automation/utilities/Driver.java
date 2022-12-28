@@ -1,8 +1,7 @@
-package automation.utilities;
+package com.automation.utilities;
 
-import automation.pages.PageInitializer;
+import com.automation.pages.PageInitializer;
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.apache.commons.collections.bidimap.AbstractDualBidiMap;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.chrome.ChromeDriver;

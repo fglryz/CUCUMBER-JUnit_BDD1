@@ -1,7 +1,7 @@
 
 Feature: As a user, I should be able to login, so that I can land on homepage.
 
- @smoke
+@smoke
      Scenario Outline: User should be able to login with  Valid Credentials
      Given User navigate  the url
      When  User enters "<Valid Username>"

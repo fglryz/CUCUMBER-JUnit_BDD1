@@ -1,4 +1,4 @@
-package automation.pages;
+package com.automation.pages;
 
 import org.junit.jupiter.api.BeforeAll;
 

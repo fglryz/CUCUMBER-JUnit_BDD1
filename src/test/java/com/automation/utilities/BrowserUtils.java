@@ -1,7 +1,6 @@
-package automation.utilities;
+package com.automation.utilities;
 
-import automation.pages.PageInitializer;
-import io.cucumber.java.ro.Si;
+import com.automation.pages.PageInitializer;
 import org.junit.Assert;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;

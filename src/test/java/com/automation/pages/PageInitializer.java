@@ -1,6 +1,6 @@
-package automation.pages;
+package com.automation.pages;
 
-import automation.utilities.Driver;
+import com.automation.utilities.Driver;
 
 public class PageInitializer extends Driver {
     public static TaskPage taskPage;

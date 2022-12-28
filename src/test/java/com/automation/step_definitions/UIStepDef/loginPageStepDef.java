@@ -1,9 +1,9 @@
-package automation.step_definitions.UIStepDef;
+package com.automation.step_definitions.UIStepDef;
 
 
 
-import automation.utilities.BrowserUtils;
-import automation.utilities.ConfigurationReader;
+import com.automation.utilities.BrowserUtils;
+import com.automation.utilities.ConfigurationReader;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;

@@ -1,6 +1,6 @@
-package automation.step_definitions;
+package com.automation.step_definitions;
 
-import automation.utilities.Driver;
+import com.automation.utilities.Driver;
 import io.cucumber.java.After;
 import io.cucumber.java.Scenario;
 import org.openqa.selenium.OutputType;

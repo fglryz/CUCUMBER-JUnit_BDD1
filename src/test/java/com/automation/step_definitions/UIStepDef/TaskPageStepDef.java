@@ -1,15 +1,13 @@
-package automation.step_definitions.UIStepDef;
+package com.automation.step_definitions.UIStepDef;
 
 
-import automation.pages.TaskPage;
-import automation.utilities.BrowserUtils;
-import automation.utilities.Driver;
+import com.automation.pages.TaskPage;
+import com.automation.utilities.BrowserUtils;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 
 
 public class TaskPageStepDef extends BrowserUtils {

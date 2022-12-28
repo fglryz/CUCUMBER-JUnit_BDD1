@@ -1,10 +1,9 @@
-package automation.step_definitions.UIStepDef;
+package com.automation.step_definitions.UIStepDef;
 
 
-import automation.pages.MessagePage;
-import automation.utilities.BrowserUtils;
-import automation.utilities.ConfigurationReader;
-import automation.utilities.Driver;
+import com.automation.pages.MessagePage;
+import com.automation.utilities.BrowserUtils;
+import com.automation.utilities.ConfigurationReader;
 import com.github.javafaker.Faker;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;

@@ -4,7 +4,7 @@ Feature: As a user, I should be able to create a task
   Background: For the scenarios in the feature file, user is expected to be on homepage
     Given User navigate  the url
 
-  @smoke
+@smoke
   Scenario: User should be able to create a task with Responsible  Person
     When User clicks Task tab
     When User cleans responsible person box
@@ -69,7 +69,7 @@ Feature: As a user, I should be able to create a task
     When User clicks Send button at Messages Tab
     Then User sees the "Task has been created" window
 
-  @smoke
+
   Scenario Outline: User should be able to create a task with Participants
     When User clicks Task tab
     When User clicks Participant buttons
@@ -85,7 +85,7 @@ Feature: As a user, I should be able to create a task
       | helpdesk45@cybertekschool.com |
 
 
-  @smoke
+
   Scenario: User should be able to create a task with Observer
     When User clicks Task tab
     When User clicks observer tab

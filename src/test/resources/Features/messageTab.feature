@@ -4,7 +4,7 @@ Feature: As a user, I should be able to add link, insert video, mention, quote, 
   Background: For the scenarios in the feature file, user is expected to be on homepage
     Given User navigate  the url
     Given User navigates to messages tab
-  @smoke
+
   Scenario: User should be able to add mentions about only department employees
     When User clicks Add Mention button
     And User clicks Employee and departments tab
@@ -41,7 +41,7 @@ Feature: As a user, I should be able to add link, insert video, mention, quote, 
       | You Are Not Where You Think You Are            | https://www.youtube.com/watch?v=Pj-h6MEgE7I&t=4s&ab_channel=Kurzgesagt%E2%80%93InaNutshell |
       | Death From Space — Gamma-Ray Bursts Explained  | https://www.youtube.com/watch?v=RLykC1VN7NY&ab_channel=Kurzgesagt%E2%80%93InaNutshell      |
 
-  @smoke
+@smoke
   Scenario Outline: User should be able to insert YouTube and Vimeo video
     When User clicks Insert Video button
     When User enters "<URL>" of the Video from "<Type>"
@@ -82,7 +82,7 @@ Feature: As a user, I should be able to add link, insert video, mention, quote, 
       | Java     |
       | Selenium |
 
-  @smoke
+
   Scenario Outline: User should be able to remove tags before sending the message
     When User clicks add tag button
     When User enter a message input in message box

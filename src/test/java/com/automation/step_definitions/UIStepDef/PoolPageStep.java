@@ -1,9 +1,8 @@
-package automation.step_definitions.UIStepDef;
+package com.automation.step_definitions.UIStepDef;
 
-import automation.pages.BasePage;
-import automation.pages.PoolPage;
-import automation.utilities.BrowserUtils;
-import automation.utilities.Driver;
+import com.automation.pages.BasePage;
+import com.automation.pages.PoolPage;
+import com.automation.utilities.BrowserUtils;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;

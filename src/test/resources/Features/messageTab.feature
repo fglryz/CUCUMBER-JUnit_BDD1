@@ -41,7 +41,7 @@ Feature: As a user, I should be able to add link, insert video, mention, quote, 
       | You Are Not Where You Think You Are            | https://www.youtube.com/watch?v=Pj-h6MEgE7I&t=4s&ab_channel=Kurzgesagt%E2%80%93InaNutshell |
       | Death From Space — Gamma-Ray Bursts Explained  | https://www.youtube.com/watch?v=RLykC1VN7NY&ab_channel=Kurzgesagt%E2%80%93InaNutshell      |
 
-@smoke
+
   Scenario Outline: User should be able to insert YouTube and Vimeo video
     When User clicks Insert Video button
     When User enters "<URL>" of the Video from "<Type>"

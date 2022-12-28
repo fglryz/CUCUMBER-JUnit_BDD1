@@ -1,4 +1,4 @@
-package com.automation.step_definitions.UIStepDef;
+package com.automation.step_definitions;
 
 
 import com.automation.pages.MessagePage;

@@ -4,7 +4,7 @@ Feature: As a user, I should be able to create a task
   Background: For the scenarios in the feature file, user is expected to be on homepage
     Given User navigate  the url
 
-@smoke
+
   Scenario: User should be able to create a task with Responsible  Person
     When User clicks Task tab
     When User cleans responsible person box

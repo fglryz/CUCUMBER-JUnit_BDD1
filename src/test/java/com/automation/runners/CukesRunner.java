@@ -12,8 +12,8 @@ import org.junit.runner.RunWith;
                 "rerun:target/rerun.txt",
                 "me.jvt.cucumber.report.PrettyReports:target/cucumber",
         },
-        features = "src/test/resources/features",
-        glue = "automation/step_definitions",
+        features = "src/test/resources/Features",
+        glue = "com/automation/step_definitions",
         dryRun =false,
         tags = "@smoke",
         publish = false
